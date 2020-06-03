@@ -1,0 +1,11 @@
+<% @cars.each do |car| %>
+<div class="img">
+  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
+<div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
+  <p><%= car.model %></p>
+  <p><%= car.description %></p>
+  <a href="#" class="btn btn-dark">See cars details</a>
+</div>
+</div>
+<% end %>
