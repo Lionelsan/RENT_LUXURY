@@ -5,6 +5,7 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
+    redirect_to cars_path
   end
 
   def new
@@ -32,7 +33,11 @@ class CarsController < ApplicationController
     redirect_to car_path(@car)
   end
 
-  def delete
+  def destroy
+    @car = Car.find(params[:id])
+    @car = Car.destroy
+
+    redirect_to car_path(@car)
   end
 
   private
