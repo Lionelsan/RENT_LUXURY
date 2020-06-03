@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    position: relative;
+    height: 100vh;
+}
+// .corp {
+//     min-height: calc(100vh-200px) !important;
+// }
