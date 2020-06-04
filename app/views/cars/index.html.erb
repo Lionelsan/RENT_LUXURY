@@ -1,12 +1,18 @@
+
+
 <% @cars.each do |car| %>
-<div class="img">
-  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
-</div>
-<div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
-  <p><%= car.model %></p>
-  <p><%= car.description %></p>
- <%= link_to 'Edit', car_path(car), class: 'btn btn-primary'%>
- <%= link_to 'Delete' %>
-</div>
+<div class="card-trip">
+  <div class="imgcar"> <%= cl_image_tag car.photo.key %></div>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= car.brand  %></h2>
+      <p><%= car.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= car.price_per_day %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
 </div>
 <% end %>
+
+
+
