@@ -5,8 +5,8 @@
 <div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
   <p><%= car.model %></p>
   <p><%= car.description %></p>
- <%= link_to 'Edit' car_path(card), class: 'btn btn-primary%>
- <%= link_to 'Delete' %>
+   <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
+   <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
+   <%= link_to 'Destroy', car_path(car), method: :delete, data: { confirm: 'Are you sure?' }%>
+  <% end %>
 </div>
-</div>
-<% end %>
