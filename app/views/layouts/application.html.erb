@@ -13,11 +13,12 @@
   </head>
 
   <body>
+  <div id="page-container">
     <%= render "layouts/header" %>  
-   
+      <div id="content-wrap">
       <%= yield %>
-    
-    <%= render "layouts/footer" %>
-
+      </div>
+    <%= render "layouts/footer"%>
+  </div>
   </body>
 </html>
