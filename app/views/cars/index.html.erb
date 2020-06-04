@@ -1,8 +1,8 @@
 
 
 <% @cars.each do |car| %>
-<div class="img">
-  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="imgcar">
+  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill, :class => "imgcar" %>
 </div>
 <div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
   <p><%= car.model %></p>
