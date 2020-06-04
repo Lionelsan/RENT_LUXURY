@@ -1,3 +1,5 @@
+
+
 <% @cars.each do |car| %>
 <div class="img">
   <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
@@ -11,3 +13,8 @@
 </div>
   <% end %>
   <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
+
+
+
+
+
