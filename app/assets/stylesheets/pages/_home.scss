@@ -8,3 +8,28 @@
 #content-wrap {
     padding-bottom: 100px;
 }
+
+.container {
+    // background-color: grey;
+    display: flex;
+  }
+  
+  
+  h1 {
+    color: blue;
+    justify-content: center;
+  }
+  
+  p {
+    color: blue;
+    justify-content: center;
+  }
+  
+  .card-body {
+    color: blue;
+  }
+  
+  .imgcar {
+    border-radius: 30px;
+  }
+  

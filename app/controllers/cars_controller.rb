@@ -6,6 +6,7 @@ class CarsController < ApplicationController
   # We got a button Details for it render to
   def show
     @car = Car.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
