@@ -3,15 +3,16 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
+  # We got a button Details for it render to
   def show
     @car = Car.find(params[:id])
-    redirect_to cars_path
   end
 
   def new
     @car = Car.new
   end
 
+  #Creation Car
   def create
     @car = Car.new(car_params)
     @car.user = current_user
@@ -26,6 +27,7 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
+  #We got and Edit button for it render to edit_car_path
   def update
     @car = Car.find(params[:id])
     @car.update(car_params)
@@ -33,11 +35,12 @@ class CarsController < ApplicationController
     redirect_to car_path(@car)
   end
 
+  #We got a a Destroy button render to car_path(index)
   def destroy
     @car = Car.find(params[:id])
-    @car = Car.destroy
+    @car.destroy
 
-    redirect_to car_path(@car)
+    redirect_to cars_path
   end
 
   private
