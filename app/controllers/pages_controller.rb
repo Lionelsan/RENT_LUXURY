@@ -6,4 +6,9 @@ class PagesController < ApplicationController
     @user = current_user
     @bookings = @user.bookings
   end
+
+  def destroy
+    @booking = Bookings.find(params[:id])
+    @booking.destroy
+  end
 end
