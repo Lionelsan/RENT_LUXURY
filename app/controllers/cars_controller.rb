@@ -50,3 +50,6 @@ class CarsController < ApplicationController
     params.require(:car).permit(:model, :brand, :year, :description, :place, :price_per_day, :photo)
   end
 end
+
+
+
