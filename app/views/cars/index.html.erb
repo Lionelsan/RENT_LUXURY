@@ -1,23 +1,37 @@
 
 
 <% @cars.each do |car| %>
-<div class="img">
-  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="card-renting">
+  <div class="imgcar">
+    <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill, :class => "imgcar" %>
+  </div>
+  <div class="card-body"> 
+    <h5 class="card-title"><%= car.brand + " / " +car.model %></h5>
+    <%# <p><%= car.model %>
+      <p class="card-place"><%= car.place %></p>
+      <div class="d-flex justify-content-between">
+      <p class="card-place">price :</p>
+      <p class="card-price "><%= car.price_per_day  %> €</p>
+      </div>
+    <%= link_to 'Louez moi', car_path(car), class: 'btn btn-primary btnloc'%>
+  </div>
 </div>
 <div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
   <p><%= car.model %></p>
   <p><%= car.description %></p>
    <%= link_to 'Details', car_path(car), class: 'btn btn-primary' %>
   <% end %>
+  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary btn btncreate'  %>
 </div>
-   <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
+
 
 
  <!--
+
+
   Reservez votre voiture ! renvoyez sur un bookng !
   dashboard recupère voiture ! et demande de location qu'on m'a faite / et celle que j'ai faite
  -->
-
 
 
 
