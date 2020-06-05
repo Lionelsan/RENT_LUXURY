@@ -6,18 +6,17 @@
     <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill, :class => "imgcar" %>
   </div>
   <div class="card-body"> 
-    <h5 class="card-title"><%= car.brand %></h5>
-    <p><%= car.model %></p>
-    <p><%= car.description %></p>
-    <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
+    <h5 class="card-title"><%= car.brand + " / " +car.model %></h5>
+    <%# <p><%= car.model %>
+      <p class="card-place"><%= car.place %></p>
+      <div class="d-flex justify-content-between">
+      <p class="card-place">price :</p>
+      <p class="card-price "><%= car.price_per_day  %> €</p>
+      </div>
+    <%= link_to 'Louez moi', car_path(car), class: 'btn btn-primary btnloc'%>
     <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
-    <%= link_to 'Destroy', car_path(car), class: 'btn btn-primary', method: :delete, data: { confirm: 'Are you sure?' }%>
+    <%= link_to 'Destroy', car_path(car), class: 'btn btn-primary bt', method: :delete, data: { confirm: 'Are you sure?' }%>
   </div>
 </div>
   <% end %>
-  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
-
-
-
-
-
+  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary btn btncreate'  %>

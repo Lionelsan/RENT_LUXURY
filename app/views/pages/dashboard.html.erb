@@ -1,12 +1,15 @@
 <h1> Dashboard </h1>
-
+<div class="dashboard">
+<h2 class="reservation"> Mes reservation de voiture </h2>
 <% @bookings.each do |booking|  %>
 <%= booking.car.model %>
 <%= booking.car.brand %>
 <% end %>
 
+<h2 class="location"> Mes voiture en location </h2>
 <% @bookings.each do |booking|  %>
 <%= @user.cars.model %>
 <% end %>
-<%= link_to 'Back', cars_path, class: 'btn btn-primary' %>
+</div>
+<%= link_to 'Back', cars_path, class: 'btn btn-primary btnback' %>
 
