@@ -1,15 +1,18 @@
 
 
 <% @cars.each do |car| %>
-<div class="imgcar">
-  <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill, :class => "imgcar" %>
-</div>
-<div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
-  <p><%= car.model %></p>
-  <p><%= car.description %></p>
-   <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
-   <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
-   <%= link_to 'Destroy', car_path(car), class: 'btn btn-primary', method: :delete, data: { confirm: 'Are you sure?' }%>
+<div class="card-renting">
+  <div class="imgcar">
+    <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill, :class => "imgcar" %>
+  </div>
+  <div class="card-body"> 
+    <h5 class="card-title"><%= car.brand %></h5>
+    <p><%= car.model %></p>
+    <p><%= car.description %></p>
+    <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
+    <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
+    <%= link_to 'Destroy', car_path(car), class: 'btn btn-primary', method: :delete, data: { confirm: 'Are you sure?' }%>
+  </div>
 </div>
   <% end %>
   <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>

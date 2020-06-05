@@ -1,0 +1,37 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://res.cloudinary.com/dairqume0/image/upload/v1591267239/Screenshot_2020-06-04_FreeLogoDesign_1_hmileu.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" <%# data-toggle="collapse"  %>data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Accueil", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Reservez votre voiture", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Loue ta propre  voiture", new_car_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://kodak-express-paris2.com/wp-content/uploads/2017/08/femme-sourire-CV.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

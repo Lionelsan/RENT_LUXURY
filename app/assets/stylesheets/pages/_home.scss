@@ -2,10 +2,15 @@
 #page-container {
     position: relative;
     min-height: 100vh;
-    
 }
 
 #content-wrap {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-around;
     padding-bottom: 100px;
 }
 
@@ -23,13 +28,5 @@
   p {
     color: blue;
     justify-content: center;
-  }
-  
-  .card-body {
-    color: blue;
-  }
-  
-  .imgcar {
-    border-radius: 30px;
   }
   
