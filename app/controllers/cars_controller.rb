@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   def index
     @cars = Car.all
+    authorize @cars
   end
 
   # We got a button Details for it render to
@@ -15,6 +16,7 @@ class CarsController < ApplicationController
 
   #Creation Car
   def create
+    authorize @car
     @car = Car.new(car_params)
     @car.user = current_user
     if @car.save
