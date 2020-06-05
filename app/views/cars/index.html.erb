@@ -7,14 +7,18 @@
 <div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
   <p><%= car.model %></p>
   <p><%= car.description %></p>
-   <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
-</div>
+   <%= link_to 'Details', car_path(car), class: 'btn btn-primary' %>
   <% end %>
-  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
+</div>
+   <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
 
-  <% if policy(Car).create? %>
-  <%= link_to "New car", new_car_path %>
-<% end %>
+
+ <!--
+  Reservez votre voiture ! renvoyez sur un bookng !
+  dashboard recupère voiture ! et demande de location qu'on m'a faite / et celle que j'ai faite
+ -->
+
+
 
 
 
