@@ -23,7 +23,7 @@ gem 'devise'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'pundit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
