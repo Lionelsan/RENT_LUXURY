@@ -16,13 +16,14 @@
     <%= link_to 'Louez moi', car_path(car), class: 'btn btn-primary btnloc'%>
   </div>
 </div>
-<div class="card-body"> <h5 class="card-title"><%= car.brand %></h5>
+<div class="card-body"> 
+<h5 class="card-title"><%= car.brand %></h5>
   <p><%= car.model %></p>
   <p><%= car.description %></p>
    <%= link_to 'Details', car_path(car), class: 'btn btn-primary' %>
   <% end %>
-  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary btn btncreate'  %>
 </div>
+  <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary btn btncreate'  %>
 
 
 
