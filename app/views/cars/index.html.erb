@@ -8,13 +8,13 @@
   <p><%= car.model %></p>
   <p><%= car.description %></p>
    <%= link_to 'Details', car_path(car), class: 'btn btn-primary'%>
-   <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
-   <%= link_to 'Destroy', car_path(car), class: 'btn btn-primary', method: :delete, data: { confirm: 'Are you sure?' }%>
 </div>
   <% end %>
   <%= link_to 'Create a car', new_car_path, class: 'btn btn-primary'  %>
 
-
+  <% if policy(Car).create? %>
+  <%= link_to "New car", new_car_path %>
+<% end %>
 
 
 

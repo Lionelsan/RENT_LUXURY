@@ -1,5 +1,8 @@
 <h1><%= @car.model %></h1>
 <%= @car.brand %>
 <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-
+if current_user == car.user_id
+<%= link_to 'Edit', edit_car_path(car), class: 'btn btn-primary'%>
+<%= link_to 'Destroy', car_path(car), class: 'btn btn-primary', method: :delete, data: { confirm: 'Are you sure?' }%>
 <%= link_to 'Back', cars_path  %>
+
